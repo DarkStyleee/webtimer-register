@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap&subset=cyrillic');
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    color:#eee;
+    background:#353535;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.webtimer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+
+    span {
+        margin-left: 5px;
+        padding: 5px;
+        font-weight: bold;
+        background-color: rgb(102, 132, 228);
+        border-radius: 10px;
+    }
+}
+
+.webtimer-add-btn {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    background-color: rgb(102, 132, 228);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+
+    button {
+        border: none;
+        outline: none;
+        background: none;
+        cursor: pointer;
+
+        p {
+            color: white;
+            font-size: 32px; 
+        }
+    }
+}
+
+.webtimer__card {
+    width: 100%;
+    max-width: 400px;
+    min-height: 375px;
+    margin: 10px;
+    padding: 25px;
+    color: black;
+    background: #FEFEFE;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+
+    p {
+        font-size: 1.5em;
+    }
+}
+
+.card__title {
+    display: inline-block;
+    border-bottom: 2px solid rgb(32, 125, 218);
+    margin-bottom: 20px;
+}
+
+.card__input {
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 1.4em;
+    border-bottom: 2px solid rgb(32, 125, 218);
+    margin-bottom: 20px;
+}
+
+.switch {
+    width: 100%;
+    position: relative;
+}
+.switch input {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+}
+.switch input:checked {
+    z-index: 1;
+}
+.switch input:checked + label {
+    opacity: 1;
+    cursor: default;
+}
+.switch input:not(:checked) + label:hover {
+    opacity: 0.5;
+}
+.switch label {
+    color: rgb(0, 0, 0);
+    opacity: 0.33;
+    transition: opacity 0.25s ease;
+    cursor: pointer;
+}
+.switch .toggle-outside {
+    height: 100%;
+    border-radius: 2rem;
+    padding: 0.25rem;
+    overflow: hidden;
+    transition: 0.25s ease all;
+}
+.switch .toggle-inside {
+    border-radius: 5rem;
+    background: rgb(35, 129, 236);
+    border: 1px solid #195ba7;
+    position: absolute;
+    transition: 0.25s ease all;
+}
+.switch--horizontal {
+    height: 24px;
+    margin: 20px auto;
+    font-size: 0;
+}
+.switch--horizontal input {
+    height: 1.6rem;
+    width: 4.5rem;
+    left: 5rem;
+    margin: 0;
+}
+.switch--horizontal label {
+    font-size: 1.4rem;
+    display: inline-block;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+}
+.switch--horizontal label:first-of-type {
+    margin-right: 6rem;
+}
+.switch--horizontal .toggle-outside {
+    background: rgb(241, 241, 241);
+    position: absolute;
+    width: 4.5rem;
+    top: 0.2rem;
+    left: 5rem;
+}
+.switch--horizontal .toggle-inside {
+    height: 1rem;
+    width: 1rem;
+}
+.switch--horizontal input:checked ~ .toggle-outside .toggle-inside {
+    left: 0.25rem;
+}
+.switch--horizontal input ~ input:checked ~ .toggle-outside .toggle-inside {
+    left: 3.25rem;
+}
+
+.start-btn {
+    width: 100px;
+    height: 40px;
+    background-color: rgb(39, 125, 224);
+    border: 1px solid #F5F5F5;
+    border-radius: 5px;
+    padding: 6px 12px;
+    text-transform: uppercase;
+    margin: 0 auto;
+    color: #FFFFFF;
+    transition: 0.5s;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.stop-btn {
+    width: 100px;
+    height: 40px;
+    display: none;
+    background-color: rgb(255, 51, 0);
+    border: 1px solid #F5F5F5;
+    border-radius: 5px;
+    padding: 6px 12px;
+    text-transform: uppercase;
+    margin: 0 auto;
+    color: #FFFFFF;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+
+
+.webtimer__timer,.webtimer__countdown {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .timer,.countdown {
+        margin-bottom: 20px;
+
+        span {
+            font-size: 40px;
+        }
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+.countdown__inputs {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+
+    input {
+        outline: none;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1.2px solid rgb(45, 87, 202);
+        width: 30%;
+    }
+}

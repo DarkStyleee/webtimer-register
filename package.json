@@ -1,0 +1,35 @@
+{
+  "name": "www",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarkStyleee/darkstyleee.github.io.git"
+  },
+  "author": "Felix",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DarkStyleee/darkstyleee.github.io/issues"
+  },
+  "homepage": "https://github.com/DarkStyleee/darkstyleee.github.io#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {
+    "gulp-imagemin": "^6.0.0",
+    "gulp-twig": "^1.2.0"
+  }
+}

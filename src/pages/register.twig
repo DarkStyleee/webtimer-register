@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    {% include "./includes/head.twig" %}
+    <title>WebTimer</title>
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@4/themes/light.css"/>
+    <link rel="stylesheet" href="build/css/style_register.min.css">
+    <script src="https://kit.fontawesome.com/25c585bcf2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="main">
+            <div class="register">
+                <div class="register__head">
+                    <p>Регистрация</p>
+                </div>
+                <form class="register__form" id="register__form" method="post">
+                    <div class="register__inputs">
+                        <label>Email адрес</label>
+                        <input id="email" type="email" placeholder="example@mail.ru" required>
+                    </div>
+                    <div class="register__inputs number">
+                        <label>Номер телефона</label>
+                        <input id="phone" type="tel" placeholder="+7-902-195-30-48" required>
+                        <span class="country"></span>
+                    </div>
+                    <div class="register__inputs input-password">
+                        <label>Пароль<i class="far fa-question-circle show-password-tooltip"></i></label>
+                        <input id="password" type="password" placeholder="******" required>
+                        <i class="fas fa-eye show-password" id="show-password"></i>
+                    </div>
+                    <div class="register__inputs input-password">
+                        <label>Повторите пароль</label>
+                        <input id="confirm_password" type="password" placeholder="******" required>
+                        <i class="fas fa-eye show-password" id="show-confirm_password"></i>
+                    </div>
+                    <div class="register__inputs checkbox--input">
+                        <input id="checkbox_input" type="checkbox">
+                        <label for="checkbox_input">Я принимаю политику конфиденциальности</label>
+                    </div>
+                    <div id="tooltip" class="tooltip">
+                        <div id="show-error"></div>
+                        <button type="submit" class="subscribe-btn" id="subscribe-btn" disabled>Зарегистрироваться</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% include "./includes/scripts.twig" %}
+<script src="https://unpkg.com/popper.js@1"></script>
+<script src="https://unpkg.com/tippy.js@4"></script>
+<script src="build/scripts/register.js"></script>
+
+
+</body>
+</html>
